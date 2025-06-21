@@ -1,6 +1,5 @@
 import { Avatar, Box, Flex, Link, Tooltip } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
-import React from "react";
 import {
   CreatePostLogo,
   InstagramLogo,
@@ -34,7 +33,7 @@ const Sidebar = () => {
     {
       icon: <Avatar size={"sm"} name="Areeb Malik" src="/profilepic.png" />,
       text: "Profile",
-      link: "/asaprogrammer",
+      link: "/AreebMalik",
     },
   ];
   return (
@@ -46,8 +45,7 @@ const Sidebar = () => {
       position={"sticky"}
       top={0}
       left={0}
-      px={{ base: 2, md: 4 }}
-    >
+      px={{ base: 2, md: 4 }}>
       {/* For bigger screen size */}
       <Flex direction={"column"} gap={10} w="full" height={"full"}>
         <Link
@@ -55,8 +53,7 @@ const Sidebar = () => {
           as={RouterLink}
           pl={2}
           display={{ base: "none", md: "block" }}
-          cursor="p"
-        >
+          cursor="p">
           <InstagramLogo />
         </Link>
         {/* For smaller screen */}
@@ -68,8 +65,7 @@ const Sidebar = () => {
           cursor="p"
           borderRadius={6}
           _hover={{ bg: "whiteAlpha.200" }}
-          w={10}
-        >
+          w={10}>
           <InstagramMobileLogo />
         </Link>
 
@@ -83,8 +79,7 @@ const Sidebar = () => {
               placement="right"
               ml={1}
               openDelay={500}
-              display={{ base: "block", md: "none" }}
-            >
+              display={{ base: "block", md: "none" }}>
               <Link
                 display={"flex"}
                 to={item.link || null}
@@ -95,8 +90,7 @@ const Sidebar = () => {
                 borderRadius={6}
                 p={2}
                 w={{ base: 10, md: "full" }}
-                justifyContent={{ base: "center", md: "flex-start" }}
-              >
+                justifyContent={{ base: "center", md: "flex-start" }}>
                 {item.icon}
                 <Box display={{ base: "none", md: "block" }}>{item.text}</Box>
               </Link>
@@ -109,8 +103,7 @@ const Sidebar = () => {
           placement="right"
           ml={1}
           openDelay={500}
-          display={{ base: "block", md: "none" }}
-        >
+          display={{ base: "block", md: "none" }}>
           <Link
             display={"flex"}
             to={"/auth"}
@@ -122,8 +115,7 @@ const Sidebar = () => {
             p={2}
             w={{ base: 10, md: "full" }}
             mt={"auto"}
-            justifyContent={{ base: "center", md: "flex-start" }}
-          >
+            justifyContent={{ base: "center", md: "flex-start" }}>
             <BiLogOut size={25} />
             <Box display={{ base: "none", md: "block" }}>Logout</Box>
           </Link>
